@@ -35,11 +35,11 @@ const app = new Vue(
         data:
         {
             elementiImg: slides,
-            attivitàImg: slides[0],
+            attivitaImg: slides[0],
         },
         methods: {
             changeImg: function(){
-                this.attivitàImg = 
+                console.log(this.attivitaImg)
             }
         }
     });   
