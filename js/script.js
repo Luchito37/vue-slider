@@ -27,3 +27,19 @@ const slides = [
 ];
 
 console.log(slides);
+
+
+const app = new Vue(
+    {
+        el: '#app',
+        data:
+        {
+            elementiImg: slides,
+            attivitàImg: slides[0],
+        },
+        methods: {
+            changeImg: function(){
+                this.attivitàImg = 
+            }
+        }
+    });   
