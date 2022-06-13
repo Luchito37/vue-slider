@@ -40,15 +40,20 @@ const app = new Vue(
         },
         methods: {
             changeImg: function(){
-                this.index++,
-                this.attivitaImg = this.elementiImg[this.index]
+                this.index++;
                 
-                if(this.index > slides.lenght){
-                    this.elementiImg[0] 
+            
+                if(this.index >= this.elementiImg.length){
+                    this.index = 0;
                 }
+                this.attivitaImg = this.elementiImg[this.index]
             },
             backchangeImg: function(){
-                this.index--,
+                this.index--;
+
+                if(this.index < 0 ){
+                    this.index = this.elementiImg.length - 1;
+                }
                 this.attivitaImg = this.elementiImg[this.index]
             }
         }
